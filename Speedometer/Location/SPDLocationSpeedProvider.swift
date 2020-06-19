@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import Swinject
 
 protocol SPDLocationSpeedProviderDelegate: class {
     func didUpdate(_ speed: CLLocationSpeed)
@@ -35,5 +36,14 @@ extension SPDDefaultLocationSpeedProvider: SPDLocationConsumer {
     func consumeLocation(_ location: CLLocation) {
         let speed = max(location.speed,0)
         delegate?.didUpdate(speed)
+    }
+}
+
+class SPDLocationSpeedProviderAssembly: Assembly {
+    func assemble(container: Container) {
+        container.register(SPDLocationSpeedProvider.self, factory:  { r in
+            let locationProvider = r.resolve(SPDLocationProvider.self)!
+            return SPDDefaultLocationSpeedProvider(locationProvider: locationProvider)
+        }).inObjectScope(.weak)
     }
 }

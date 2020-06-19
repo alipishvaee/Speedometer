@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreLocation
-
+import Swinject
 
 extension NSNotification.Name {
     static let SPDLocationAuthorized = NSNotification.Name("NSNotification.Name.SPDLocationAuthorized")
@@ -59,6 +59,13 @@ extension SPDDefaultLocationAuthorization: SPDLocationManagerAuthorizationDelega
             break
         }
     }
-    
-    
+}
+
+class SPDLocationAuthorizationAssembly: Assembly {
+    func assemble(container: Container) {
+        container.register(SPDLocationAuthorization.self, factory: { r in
+            let locationManager = r.resolve(SPDLocationManager.self)!
+            return SPDDefaultLocationAuthorization(locationManager: locationManager)
+        }).inObjectScope(.weak)
+    }
 }
