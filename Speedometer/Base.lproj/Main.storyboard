@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,94 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Speedometer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="62" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gx-5u-fOB">
+                                <rect key="frame" x="16" y="531" width="117" height="120"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" red="0.27058823529999998" green="0.27450980390000002" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km/h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5U1-cJ-z7a">
+                                <rect key="frame" x="22" y="635" width="49" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5r-mz-YgF" customClass="UIBorderedButton" customModule="Speedometer" customModuleProvider="target">
+                                <rect key="frame" x="274" y="616" width="85" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="9rx-Bk-g3O"/>
+                                    <constraint firstAttribute="height" constant="35" id="PQQ-qY-sQc"/>
+                                </constraints>
+                                <state key="normal" title="Max Speed">
+                                    <color key="titleColor" red="0.27058823529999998" green="0.27450980390000002" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssN-hN-wGH">
+                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="62" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBM-k0-IuT">
+                                        <rect key="frame" x="16" y="-61" width="117" height="120"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joo-Bi-kcO" customClass="UIBorderedButton" customModule="Speedometer" customModuleProvider="target">
+                                        <rect key="frame" x="274" y="24" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="3sK-PX-8dM"/>
+                                            <constraint firstAttribute="height" constant="35" id="Wd8-4M-tyy"/>
+                                        </constraints>
+                                        <state key="normal" title="Max Speed">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km/h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGD-Eh-zuc">
+                                        <rect key="frame" x="22" y="43" width="49" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.27058823529999998" green="0.27450980390000002" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xBM-k0-IuT" secondAttribute="bottom" constant="16" id="Fnq-7h-C8p"/>
+                                    <constraint firstItem="xBM-k0-IuT" firstAttribute="leading" secondItem="ssN-hN-wGH" secondAttribute="leading" constant="16" id="L2B-Xq-crm"/>
+                                    <constraint firstItem="CGD-Eh-zuc" firstAttribute="leading" secondItem="ssN-hN-wGH" secondAttribute="leading" constant="22" id="TaD-wj-AOy"/>
+                                    <constraint firstAttribute="trailing" secondItem="joo-Bi-kcO" secondAttribute="trailing" constant="16" id="Xqu-or-P00"/>
+                                    <constraint firstAttribute="height" constant="75" id="ftx-e3-mbX"/>
+                                    <constraint firstAttribute="bottom" secondItem="CGD-Eh-zuc" secondAttribute="bottom" constant="8" id="nSx-qb-CMP"/>
+                                    <constraint firstAttribute="bottom" secondItem="joo-Bi-kcO" secondAttribute="bottom" constant="16" id="uZ4-Na-Ope"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ssN-hN-wGH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2LT-j9-5xr"/>
+                            <constraint firstItem="ssN-hN-wGH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="41E-jd-sv3"/>
+                            <constraint firstItem="3Gx-5u-fOB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="K4M-eM-KrB"/>
+                            <constraint firstItem="5U1-cJ-z7a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="T5x-gf-9L1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z5r-mz-YgF" secondAttribute="trailing" constant="16" id="X8N-bV-5dE"/>
+                            <constraint firstItem="ssN-hN-wGH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XTd-mf-1K8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z5r-mz-YgF" secondAttribute="bottom" constant="16" id="Yoe-Q3-6Jp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Gx-5u-fOB" secondAttribute="bottom" constant="16" id="e1c-d1-Nhx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5U1-cJ-z7a" secondAttribute="bottom" constant="8" id="odI-rh-QEY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="speedViewHeightConstraint" destination="ftx-e3-mbX" id="Pe3-5k-PTu"/>
+                        <outletCollection property="speedLabels" destination="3Gx-5u-fOB" collectionClass="NSMutableArray" id="5aU-lO-Y6c"/>
+                        <outletCollection property="colorableViews" destination="5U1-cJ-z7a" collectionClass="NSMutableArray" id="yLP-80-OOA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-58.399999999999999" y="125.4872563718141"/>
         </scene>
     </scenes>
 </document>

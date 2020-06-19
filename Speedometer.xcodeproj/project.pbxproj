@@ -24,6 +24,7 @@
 		9BE1922F249AD97C004527D3 /* SPDLocationSpeedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE1922E249AD97C004527D3 /* SPDLocationSpeedProvider.swift */; };
 		9BE19231249ADD30004527D3 /* SPDLocationSpeedChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE19230249ADD30004527D3 /* SPDLocationSpeedChecker.swift */; };
 		9BE19233249CF28D004527D3 /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE19232249CF28D004527D3 /* MainAssembler.swift */; };
+		9BE19236249D0F94004527D3 /* UIBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE19235249D0F94004527D3 /* UIBorderedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		9BE1922E249AD97C004527D3 /* SPDLocationSpeedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationSpeedProvider.swift; sourceTree = "<group>"; };
 		9BE19230249ADD30004527D3 /* SPDLocationSpeedChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationSpeedChecker.swift; sourceTree = "<group>"; };
 		9BE19232249CF28D004527D3 /* MainAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
+		9BE19235249D0F94004527D3 /* UIBorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBorderedButton.swift; sourceTree = "<group>"; };
 		A10DF6664744B4FC36979D52 /* Pods-Speedometer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.debug.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.debug.xcconfig"; sourceTree = "<group>"; };
 		B9DA22B5D812465507295ED9 /* Pods-Speedometer-SpeedometerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer-SpeedometerUITests.release.xcconfig"; path = "Target Support Files/Pods-Speedometer-SpeedometerUITests/Pods-Speedometer-SpeedometerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FB83475782FCBA53BC1AB134 /* Pods-SpeedometerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedometerTests.release.xcconfig"; path = "Target Support Files/Pods-SpeedometerTests/Pods-SpeedometerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		9BA976FF249A1479002A5C2F /* Speedometer */ = {
 			isa = PBXGroup;
 			children = (
+				9BE19234249D0F74004527D3 /* UIViews */,
 				9BE19227249A4EF6004527D3 /* Location */,
 				9BA97700249A1479002A5C2F /* AppDelegate.swift */,
 				9BA97702249A1479002A5C2F /* SceneDelegate.swift */,
@@ -182,6 +185,14 @@
 				9BE19232249CF28D004527D3 /* MainAssembler.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		9BE19234249D0F74004527D3 /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				9BE19235249D0F94004527D3 /* UIBorderedButton.swift */,
+			);
+			path = UIViews;
 			sourceTree = "<group>";
 		};
 		D4A4B7AC2190250E1A48F428 /* Frameworks */ = {
@@ -437,6 +448,7 @@
 				9BA97701249A1479002A5C2F /* AppDelegate.swift in Sources */,
 				9BE1922B249AA86C004527D3 /* SPDLocationAuthorization.swift in Sources */,
 				9BE1922D249ABDFE004527D3 /* SPDLocationProvider.swift in Sources */,
+				9BE19236249D0F94004527D3 /* UIBorderedButton.swift in Sources */,
 				9BE1922F249AD97C004527D3 /* SPDLocationSpeedProvider.swift in Sources */,
 				9BE19229249A4F1C004527D3 /* SPDLocationManager.swift in Sources */,
 				9BE19231249ADD30004527D3 /* SPDLocationSpeedChecker.swift in Sources */,

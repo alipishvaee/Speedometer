@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var speedLabels: [UILabel]!
+    @IBOutlet weak var speedViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var colorableViews: [UIView]!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 
