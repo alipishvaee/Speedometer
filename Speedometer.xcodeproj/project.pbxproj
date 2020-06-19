@@ -25,6 +25,13 @@
 		9BE19231249ADD30004527D3 /* SPDLocationSpeedChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE19230249ADD30004527D3 /* SPDLocationSpeedChecker.swift */; };
 		9BE19233249CF28D004527D3 /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE19232249CF28D004527D3 /* MainAssembler.swift */; };
 		9BE19236249D0F94004527D3 /* UIBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE19235249D0F94004527D3 /* UIBorderedButton.swift */; };
+		9BE1923A249D7F0D004527D3 /* SPDLocationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE19239249D7F0D004527D3 /* SPDLocationManagerMock.swift */; };
+		9BE1923C249D80A0004527D3 /* SPDLocationAuthorizationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE1923B249D80A0004527D3 /* SPDLocationAuthorizationMock.swift */; };
+		9BE1923E249D8188004527D3 /* SPDLocationAuthorizationDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE1923D249D8188004527D3 /* SPDLocationAuthorizationDelegateMock.swift */; };
+		9BE19240249D8271004527D3 /* SPDLocationProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE1923F249D8271004527D3 /* SPDLocationProviderMock.swift */; };
+		9BE19242249D832A004527D3 /* SPDLocationConsumerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE19241249D832A004527D3 /* SPDLocationConsumerMock.swift */; };
+		9BE19244249D8453004527D3 /* SPDLocationSpeedCheckerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE19243249D8453004527D3 /* SPDLocationSpeedCheckerDelegateMock.swift */; };
+		9BE19246249D84D5004527D3 /* SPDLocationSpeedProviderDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE19245249D84D5004527D3 /* SPDLocationSpeedProviderDelegateMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +79,13 @@
 		9BE19230249ADD30004527D3 /* SPDLocationSpeedChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationSpeedChecker.swift; sourceTree = "<group>"; };
 		9BE19232249CF28D004527D3 /* MainAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
 		9BE19235249D0F94004527D3 /* UIBorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBorderedButton.swift; sourceTree = "<group>"; };
+		9BE19239249D7F0D004527D3 /* SPDLocationManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationManagerMock.swift; sourceTree = "<group>"; };
+		9BE1923B249D80A0004527D3 /* SPDLocationAuthorizationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationAuthorizationMock.swift; sourceTree = "<group>"; };
+		9BE1923D249D8188004527D3 /* SPDLocationAuthorizationDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationAuthorizationDelegateMock.swift; sourceTree = "<group>"; };
+		9BE1923F249D8271004527D3 /* SPDLocationProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationProviderMock.swift; sourceTree = "<group>"; };
+		9BE19241249D832A004527D3 /* SPDLocationConsumerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationConsumerMock.swift; sourceTree = "<group>"; };
+		9BE19243249D8453004527D3 /* SPDLocationSpeedCheckerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationSpeedCheckerDelegateMock.swift; sourceTree = "<group>"; };
+		9BE19245249D84D5004527D3 /* SPDLocationSpeedProviderDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDLocationSpeedProviderDelegateMock.swift; sourceTree = "<group>"; };
 		A10DF6664744B4FC36979D52 /* Pods-Speedometer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer.debug.xcconfig"; path = "Target Support Files/Pods-Speedometer/Pods-Speedometer.debug.xcconfig"; sourceTree = "<group>"; };
 		B9DA22B5D812465507295ED9 /* Pods-Speedometer-SpeedometerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Speedometer-SpeedometerUITests.release.xcconfig"; path = "Target Support Files/Pods-Speedometer-SpeedometerUITests/Pods-Speedometer-SpeedometerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FB83475782FCBA53BC1AB134 /* Pods-SpeedometerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedometerTests.release.xcconfig"; path = "Target Support Files/Pods-SpeedometerTests/Pods-SpeedometerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +174,7 @@
 		9BA97716249A1480002A5C2F /* SpeedometerTests */ = {
 			isa = PBXGroup;
 			children = (
+				9BE19238249D7EE2004527D3 /* Mocks */,
 				9BA97717249A1480002A5C2F /* SpeedometerTests.swift */,
 				9BA97719249A1480002A5C2F /* Info.plist */,
 			);
@@ -193,6 +208,20 @@
 				9BE19235249D0F94004527D3 /* UIBorderedButton.swift */,
 			);
 			path = UIViews;
+			sourceTree = "<group>";
+		};
+		9BE19238249D7EE2004527D3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9BE19239249D7F0D004527D3 /* SPDLocationManagerMock.swift */,
+				9BE1923B249D80A0004527D3 /* SPDLocationAuthorizationMock.swift */,
+				9BE1923D249D8188004527D3 /* SPDLocationAuthorizationDelegateMock.swift */,
+				9BE1923F249D8271004527D3 /* SPDLocationProviderMock.swift */,
+				9BE19241249D832A004527D3 /* SPDLocationConsumerMock.swift */,
+				9BE19243249D8453004527D3 /* SPDLocationSpeedCheckerDelegateMock.swift */,
+				9BE19245249D84D5004527D3 /* SPDLocationSpeedProviderDelegateMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		D4A4B7AC2190250E1A48F428 /* Frameworks */ = {
@@ -461,7 +490,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE1923A249D7F0D004527D3 /* SPDLocationManagerMock.swift in Sources */,
+				9BE1923C249D80A0004527D3 /* SPDLocationAuthorizationMock.swift in Sources */,
 				9BA97718249A1480002A5C2F /* SpeedometerTests.swift in Sources */,
+				9BE19244249D8453004527D3 /* SPDLocationSpeedCheckerDelegateMock.swift in Sources */,
+				9BE1923E249D8188004527D3 /* SPDLocationAuthorizationDelegateMock.swift in Sources */,
+				9BE19242249D832A004527D3 /* SPDLocationConsumerMock.swift in Sources */,
+				9BE19246249D84D5004527D3 /* SPDLocationSpeedProviderDelegateMock.swift in Sources */,
+				9BE19240249D8271004527D3 /* SPDLocationProviderMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
