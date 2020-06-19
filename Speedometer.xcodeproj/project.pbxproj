@@ -146,6 +146,7 @@
 				9BE19234249D0F74004527D3 /* UIViews */,
 				9BE19227249A4EF6004527D3 /* Location */,
 				9BA97700249A1479002A5C2F /* AppDelegate.swift */,
+				9BE19232249CF28D004527D3 /* MainAssembler.swift */,
 				9BA97702249A1479002A5C2F /* SceneDelegate.swift */,
 				9BA97704249A1479002A5C2F /* ViewController.swift */,
 				9BA97706249A1479002A5C2F /* Main.storyboard */,
@@ -182,7 +183,6 @@
 				9BE1922C249ABDFE004527D3 /* SPDLocationProvider.swift */,
 				9BE1922A249AA86C004527D3 /* SPDLocationAuthorization.swift */,
 				9BE19228249A4F1C004527D3 /* SPDLocationManager.swift */,
-				9BE19232249CF28D004527D3 /* MainAssembler.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";

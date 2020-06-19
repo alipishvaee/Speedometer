@@ -36,6 +36,9 @@
                                 <state key="normal" title="Max Speed">
                                     <color key="titleColor" red="0.27058823529999998" green="0.27450980390000002" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapMaxSpeed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6nb-N6-ptH"/>
+                                </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssN-hN-wGH">
                                 <rect key="frame" x="0.0" y="592" width="375" height="75"/>
@@ -55,6 +58,9 @@
                                         <state key="normal" title="Max Speed">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTapMaxSpeed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5e7-FP-aZm"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km/h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGD-Eh-zuc">
                                         <rect key="frame" x="22" y="43" width="49" height="24"/>
