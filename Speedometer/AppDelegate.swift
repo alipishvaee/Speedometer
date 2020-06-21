@@ -11,6 +11,7 @@ import SwinjectStoryboard
 
 @UIApplicationMain
 class AppDelegate: UIResponder {
+    
     var window: UIWindow?
     let mainAssembler = MainAssembler()
     let locationAuthorization: SPDLocationAuthorization
@@ -20,9 +21,11 @@ class AppDelegate: UIResponder {
         super.init()
         locationAuthorization.delegate = self
     }
+    
 }
 
 private extension AppDelegate {
+    
     func setupWindow() {
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
@@ -31,6 +34,7 @@ private extension AppDelegate {
         window.rootViewController = storybaord.instantiateInitialViewController()
         self.window = window
     }
+    
 }
 
 extension AppDelegate: UIApplicationDelegate {
