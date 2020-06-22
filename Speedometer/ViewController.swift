@@ -11,7 +11,6 @@ import CoreLocation
 import Swinject
 import SwinjectStoryboard
 
-
 private let maxDisplayableSpeed: CLLocationSpeed = 40 // M/S or 144 KM/H
 
 class ViewController: UIViewController {
@@ -30,9 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet var speedLabels: [UILabel]!
     @IBOutlet weak var speedViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet var colorableViews: [UIView]!
-    
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         for label in speedLabels {
@@ -122,6 +119,5 @@ class ViewControllerAssembly: Assembly {
             c.speedProvider = r.resolve(SPDLocationSpeedProvider.self)!
             c.speedChecker = r.resolve(SPDLocationSpeedChecker.self)!
         }
-        
     }
 }
