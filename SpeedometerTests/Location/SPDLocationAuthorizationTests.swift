@@ -24,7 +24,12 @@ class SPDLocationAuthorizationTests: XCTestCase {
     }
 
     func test_checkAuthorization_notDetermined_requestsAuthorization() {
-        
+//        Arrange
+        locationManagerMock.authorizationStatus = .notDetermined
+//        Act
+        sut.checkAuthorization()
+//        Assert
+        XCTAssertTrue(locationManagerMock.requestedWhenInUseAuthorization)
     }
     
     func test_checkAuthorization_determined_doesNotRequestsAuthorization() {
