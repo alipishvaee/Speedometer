@@ -24,32 +24,59 @@ class SPDLocationAuthorizationTests: XCTestCase {
     }
 
     func test_checkAuthorization_notDetermined_requestsAuthorization() {
-//        Arrange
+        // Arrange
         locationManagerMock.authorizationStatus = .notDetermined
-//        Act
+        // Act
         sut.checkAuthorization()
-//        Assert
+        // Assert
         XCTAssertTrue(locationManagerMock.requestedWhenInUseAuthorization)
     }
     
     func test_checkAuthorization_determined_doesNotRequestsAuthorization() {
-        
+        // Arrange
+        locationManagerMock.authorizationStatus = .denied
+        // Act
+        sut.checkAuthorization()
+        // Assert
+        XCTAssertFalse(locationManagerMock.requestedWhenInUseAuthorization)
     }
     
     func test_didChangeAuthorizationStatus_authorizedWhenInUse_notificationIsPosted() {
-        
+        // Arrange
+        let notificationName = NSNotification.Name.SPDLocationAuthorized
+        let _  = expectation(forNotification: notificationName, object: sut, handler: nil)
+        // Act
+        locationManagerMock.authorizationDelegate?.locationManager(locationManagerMock, didChangeAuthorization: .authorizedWhenInUse)
+        sut.checkAuthorization()
+        // Assert
+        waitForExpectations(timeout: 0, handler: nil)
     }
     
     func test_didChangeAuthorizationStatus_authorizedAlways_notificationIsPosted() {
-        
+        // Arrange
+        let notificationName = NSNotification.Name.SPDLocationAuthorized
+        let _  = expectation(forNotification: notificationName, object: sut, handler: nil)
+        // Act
+        locationManagerMock.authorizationDelegate?.locationManager(locationManagerMock, didChangeAuthorization: .authorizedAlways)
+        sut.checkAuthorization()
+        // Assert
+        waitForExpectations(timeout: 0, handler: nil)
     }
     
     func test_didChangeAuthorizationStatus_denied_delegateInformed() {
-        
+        // Arrange
+        // Act
+        locationManagerMock.authorizationDelegate?.locationManager(locationManagerMock, didChangeAuthorization: .denied)
+        // Assert
+        XCTAssertTrue(delegateMock.authorizationWasDenied)
     }
     
     func test_didChangeAuthorizationStatus_restricted_delegateInformed() {
-        
+        // Arrange
+        // Act
+        locationManagerMock.authorizationDelegate?.locationManager(locationManagerMock, didChangeAuthorization: .restricted)
+        // Assert
+        XCTAssertTrue(delegateMock.authorizationWasDenied)
     }
     
 }
