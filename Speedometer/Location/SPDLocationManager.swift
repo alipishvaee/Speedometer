@@ -16,10 +16,12 @@ protocol SPDLocationManagerDelegate: class {
 }
 
 protocol SPDLocationManagerAuthorizationDelegate: class {
+    
     func locationManager(_ manager: SPDLocationManager, didChangeAuthorization status: CLAuthorizationStatus)
 }
 
 protocol SPDLocationManager: class {
+    
     var delegate: SPDLocationManagerDelegate? { get set }
     var authorizationDelegate: SPDLocationManagerAuthorizationDelegate? { get set }
     var authorizationStatus: CLAuthorizationStatus { get }
